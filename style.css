@@ -21,6 +21,7 @@ body {
 	color: #423f43;
 	font-weight: bold;
 	margin: 0;
+	padding: 0 1rem;
 }
 
 /* background */
@@ -51,20 +52,20 @@ body::before {
 	padding: 1.5rem 1rem;
 	border-radius: 3px;
 	background-color: var(--color-pearl-white);
-	max-width: 90%;
+	max-width: 33em;
 	opacity: 0.9;
 }
 
 /* header */
 
-#title, h2 {
-  margin:0.5rem 0;
+#title,
+h2 {
+	margin: 0.5rem 0;
 	padding: 0;
 	font-size: 2rem;
 	text-align: center;
 	font-weight: 500;
 }
-
 
 #description {
 	text-align: center;
@@ -78,7 +79,7 @@ body::before {
 	align-items: center;
 }
 
-h3 {
+.logo p {
 	margin: 0 1rem;
 	font-family: "Dancing Script";
 	font-size: 2rem;
@@ -138,8 +139,13 @@ fieldset {
 	justify-content: space-evenly;
 }
 
-legend {
-	display: none;
+.sr-only {
+	position: absolute;
+	left: -10000px;
+	top: auto;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
 }
 
 .checkbox-skill-div {
@@ -157,9 +163,11 @@ legend {
 	transition: box-shadow 0.2s ease-in-out;
 }
 
-.form-control:focus {
+.form-control:focus,
+input[type="checkbox"]:focus,
+input[type="radio"]:focus {
 	outline: 0;
-	box-shadow: 0 0 0 0.1rem var(--color-dusty-rose);
+	box-shadow: 0 0 0 0.15rem var(--color-dusty-rose);
 }
 
 textarea {
@@ -190,10 +198,18 @@ textarea {
 	background-color: var(--color-dusty-rose);
 }
 
+#submit:focus {
+	box-shadow: 0 0 0 0.2rem var(--color-dusty-rose);
+}
+
 /* footer */
 
 footer {
 	text-align: center;
+}
+
+.footer-links {
+	display: inline-block;
 }
 
 #creator {
@@ -213,20 +229,19 @@ a {
 	text-shadow: 0 4px 3px rgba(27, 26, 26, 0.966);
 }
 
-footer a:hover {
+a:hover {
 	color: var(--color-pearl-white);
 }
 
 /* media */
 
-@media (min-width: 481px) {
+@media (min-width: 30em) {
 	.container {
-		max-width: 70%;
 		padding: 1.5rem 1.5rem;
 	}
 }
 
-@media (min-width: 769px) {
+@media (min-width: 38em) {
 	#name-div {
 		flex-direction: row;
 		justify-content: space-between;
@@ -238,13 +253,6 @@ footer a:hover {
 	}
 
 	.container {
-		max-width: 60%;
 		padding: 1.5rem 1.725rem;
-	}
-}
-
-@media (min-width: 1025px) {
-	.container {
-		max-width: 50%;
 	}
 }
