@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Mulish&display=swap");
 
+/* || GENERAL STYLES */
+
 html {
 	box-sizing: border-box;
 	font-size: 100%;
@@ -24,7 +26,7 @@ body {
 	padding: 0 1rem;
 }
 
-/* background */
+/* || BACKGROUND */
 
 body::before {
 	content: "";
@@ -56,7 +58,7 @@ body::before {
 	opacity: 0.9;
 }
 
-/* header */
+/* || HEADER */
 
 #title,
 h2 {
@@ -97,7 +99,7 @@ img {
 	height: 4.5rem;
 }
 
-/* form */
+/* || FORM */
 
 form {
 	display: flex;
@@ -176,7 +178,7 @@ textarea {
 	resize: vertical;
 }
 
-/* button */
+/* || BUTTON */
 
 #submit {
 	margin: 1rem auto;
@@ -202,7 +204,7 @@ textarea {
 	box-shadow: 0 0 0 0.2rem var(--color-dusty-rose);
 }
 
-/* footer */
+/*|| FOOTER */
 
 footer {
 	text-align: center;
@@ -233,7 +235,7 @@ a:hover {
 	color: var(--color-pearl-white);
 }
 
-/* media */
+/* || MEDIA */
 
 @media (min-width: 30em) {
 	.container {
